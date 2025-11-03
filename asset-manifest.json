@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/my-portfolio/static/css/main.39042349.css",
+    "main.js": "/my-portfolio/static/js/main.2d694956.js",
+    "static/js/453.ececc0a5.chunk.js": "/my-portfolio/static/js/453.ececc0a5.chunk.js",
+    "static/media/Menu.png": "/my-portfolio/static/media/Menu.9a4c0cde4cdc2b009159.png",
+    "static/media/About Us.png": "/my-portfolio/static/media/About Us.d5fd3f5ed315aacc25af.png",
+    "static/media/Frame 30.png": "/my-portfolio/static/media/Frame 30.e0d15f031595cea260f3.png",
+    "static/media/Customer.png": "/my-portfolio/static/media/Customer.b8a9902888a91d18ae4e.png",
+    "static/media/Home.png": "/my-portfolio/static/media/Home.33258f68c4efca80d0e1.png",
+    "static/media/Home Page.png": "/my-portfolio/static/media/Home Page.564aecef49aaa307c797.png",
+    "static/media/Community Page.png": "/my-portfolio/static/media/Community Page.eb5f55fea44f6931081c.png",
+    "static/media/Add Friends.png": "/my-portfolio/static/media/Add Friends.16dca17427ce4d6fcdd1.png",
+    "static/media/Mood Tracker.png": "/my-portfolio/static/media/Mood Tracker.10842ade55c98598fd02.png",
+    "static/media/Chatbot Page.png": "/my-portfolio/static/media/Chatbot Page.88e88f62b5ecc0881a68.png",
+    "static/media/Group 22.png": "/my-portfolio/static/media/Group 22.4e7e18ce782cc7040dab.png",
+    "static/media/Subscription Page.png": "/my-portfolio/static/media/Subscription Page.1d94a997e55dd17dddb9.png",
+    "static/media/Home - Chat Page.png": "/my-portfolio/static/media/Home - Chat Page.c46dc8ad631ed1a6e9e5.png",
+    "static/media/Chat Person Page.png": "/my-portfolio/static/media/Chat Person Page.e46d7cd4fa9d934b066d.png",
+    "static/media/Landing Page.png": "/my-portfolio/static/media/Landing Page.afb31d0f854ca2e85f07.png",
+    "static/media/Add Friend Page.png": "/my-portfolio/static/media/Add Friend Page.f39218aee903f4d13e92.png",
+    "index.html": "/my-portfolio/index.html",
+    "main.39042349.css.map": "/my-portfolio/static/css/main.39042349.css.map",
+    "main.2d694956.js.map": "/my-portfolio/static/js/main.2d694956.js.map",
+    "453.ececc0a5.chunk.js.map": "/my-portfolio/static/js/453.ececc0a5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.39042349.css",
+    "static/js/main.2d694956.js"
+  ]
+}
