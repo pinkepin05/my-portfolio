@@ -11,7 +11,7 @@ import {
   ExternalLink,
   Calendar,
   Briefcase,
-  // Keep Lucide icons for general UI elements
+  Download, // Add this line
 } from "lucide-react";
 
 // Import specific technology/brand icons from react-icons/si
@@ -69,6 +69,17 @@ export default function Portfolio() {
     ).matches;
     setDarkMode(prefersDark);
   }, []);
+
+  // Function to handle CV download
+  const handleDownloadCV = () => {
+    // Create a link element and trigger download
+    const link = document.createElement("a");
+    link.href = process.env.PUBLIC_URL + "/Kevin Jeremia - Resume.pdf"; // Path to CV file in public folder
+    link.download = "Kevin_Jeremia_Resume.pdf"; // Name of the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   // UPDATED SKILLS DATA WITH SPECIFIC SIMPLE ICONS AND THEIR OFFICIAL COLORS
   const skills = [
@@ -237,6 +248,16 @@ export default function Portfolio() {
                 {item}
               </button>
             ))}
+
+            {/* CV Download Button */}
+            <button
+              onClick={handleDownloadCV}
+              className="text-sm tracking-wider uppercase font-light hover:opacity-60 transition-opacity hidden md:flex items-center gap-2"
+            >
+              {/* <Download size={16} /> */}
+              <span>Download CV</span>
+            </button>
+
             <button
               onClick={() => setDarkMode(!darkMode)}
               className="p-2 hover:opacity-60 transition-opacity"
