@@ -115,7 +115,7 @@ export default function Portfolio() {
         KeSapianDetail3,
         KeSapianDetail4,
       ],
-      link: "#",
+      githubLink: "https://github.com/Lehtamyr/SE-KeSapian",
     },
     {
       id: 2,
@@ -139,7 +139,7 @@ export default function Portfolio() {
         MindHavenDetail4,
         MindHavenDetail5,
       ],
-      link: "#",
+      githubLink: "https://github.com/ceciliasx/MindHaven",
     },
     {
       id: 3,
@@ -161,7 +161,8 @@ export default function Portfolio() {
         CateringzDetail3,
         CateringzDetail4,
       ],
-      link: "#",
+      githubLink:
+        "https://github.com/pinkepin05/CateringZ-Human-Computer-Interaction-Project-",
     },
     // {
     //   id: 4,
@@ -482,7 +483,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Project Detail Modal */}
+      {/* Project Detail Modal - UPDATED VERSION */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8">
           <div
@@ -569,19 +570,48 @@ export default function Portfolio() {
                 </div>
               </div>
 
-              <div className="space-y-6">
-                {/* CHALLENGE SECTION REMOVED:
-                
-                <div>
-                  <h4 className="text-sm font-light mb-3 tracking-wide">Challenge</h4>
-                  <p className={`font-light leading-relaxed ${
-                    darkMode ? 'text-gray-400' : 'text-gray-600'
-                  }`}>
-                    {selectedProject.challenges}
-                  </p>
-                </div> 
-                */}
+              {/* --- ADD PROJECT LINKS SECTION --- */}
+              {(selectedProject.githubLink || selectedProject.liveLink) && (
+                <div className="flex gap-4 pt-4">
+                  {selectedProject.githubLink && (
+                    <a
+                      href={selectedProject.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-flex items-center gap-2 px-6 py-3 border transition-all duration-300 ${
+                        darkMode
+                          ? "border-white hover:bg-white hover:text-black"
+                          : "border-black hover:bg-black hover:text-white"
+                      }`}
+                    >
+                      <Github size={18} />
+                      <span className="text-sm tracking-wider uppercase font-light">
+                        View Code
+                      </span>
+                    </a>
+                  )}
+                  {selectedProject.liveLink && (
+                    <a
+                      href={selectedProject.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-flex items-center gap-2 px-6 py-3 border transition-all duration-300 ${
+                        darkMode
+                          ? "border-white hover:bg-white hover:text-black"
+                          : "border-black hover:bg-black hover:text-white"
+                      }`}
+                    >
+                      <ExternalLink size={18} />
+                      <span className="text-sm tracking-wider uppercase font-light">
+                        Live Demo
+                      </span>
+                    </a>
+                  )}
+                </div>
+              )}
+              {/* --- END PROJECT LINKS SECTION --- */}
 
+              <div className="space-y-6">
                 <div>
                   <h4 className="text-sm font-light mb-3 tracking-wide">
                     Outcome
@@ -596,31 +626,17 @@ export default function Portfolio() {
                 </div>
               </div>
 
-              {/* --- UPDATED IMAGE DISPLAY FOR PROJECT DETAIL (Optimized for Tall/Mobile Screenshots) --- */}
               <div className="flex flex-wrap justify-center gap-6 mt-8">
                 {selectedProject.images.map((img, index) => (
                   <img
                     key={index}
                     src={img}
                     alt={`${selectedProject.title} screenshot ${index + 1}`}
-                    // UPDATED CLASSES: md:w-1/3 width to fit more, h-96 for fixed height
-                    // object-contain ensures the entire tall image is visible.
                     className="w-full md:w-1/3 object-cover shadow-md h-96"
                     style={{ objectFit: "contain" }}
                   />
                 ))}
               </div>
-              {/* --- END UPDATED IMAGE DISPLAY --- */}
-
-              {/* REMOVED: View Live Project link
-              <a
-                href={selectedProject.link}
-                className="inline-flex items-center gap-2 text-sm tracking-wider uppercase hover:opacity-60 transition-opacity"
-              >
-                View Live Project
-                <ExternalLink size={14} />
-              </a>
-              */}
             </div>
           </div>
         </div>
